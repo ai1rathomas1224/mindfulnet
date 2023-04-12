@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:path_provider/path_provider.dart';
@@ -207,9 +208,9 @@ class _TimerPageState extends State<TimerPage> {
                   SizedBox(
                     height: 60.0,
                     width: 120.0,
-                    child: ElevatedButton(
+                    child: IconButton(
                       onPressed: () => timeStartCount(),
-                      child: Text('START'),
+                      icon: Icon(FluentIcons.play_24_regular),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45.0),
@@ -220,9 +221,9 @@ class _TimerPageState extends State<TimerPage> {
                   SizedBox(
                     height: 60.0,
                     width: 120.0,
-                    child: ElevatedButton(
+                    child: IconButton(
+                      icon: Icon(FluentIcons.pause_24_regular),
                       onPressed: () => timePauseCount(),
-                      child: Text('PAUSE'),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45.0),
@@ -233,9 +234,9 @@ class _TimerPageState extends State<TimerPage> {
                   SizedBox(
                     height: 60.0,
                     width: 120.0,
-                    child: ElevatedButton(
+                    child: IconButton(
+                      icon: Icon(FluentIcons.timer_48_regular),
                       onPressed: () => timeResetCount(),
-                      child: Text('RESET'),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45.0),

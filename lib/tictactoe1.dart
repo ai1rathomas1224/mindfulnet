@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class TicTacToeGame extends StatefulWidget {
   @override
@@ -94,11 +95,11 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Congratulations!'),
-            content: Text('You won the game!'),
+            title: Text('Congratulations'),
+            content: Text('You win'),
             actions: <Widget>[
               TextButton(
-                child: Text('New Game'),
+                child: Text('Play a new game?'),
                 onPressed: () {
                   startNewGame();
                   Navigator.of(context).pop();
@@ -113,11 +114,11 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Draw!'),
-            content: Text('The game ended in a draw.'),
+            title: Text('Draw'),
+            content: Text('Its a tie'),
             actions: <Widget>[
               TextButton(
-                child: Text('New Game'),
+                child: Text('Play a new game?'),
                 onPressed: () {
                   startNewGame();
                   Navigator.of(context).pop();
@@ -135,10 +136,10 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
           builder: (BuildContext context) {
             return AlertDialog(
               title: Text('Game Over'),
-              content: Text('The AI has won the game!'),
+              content: Text('This time the bot wins'),
               actions: <Widget>[
                 TextButton(
-                  child: Text('New Game'),
+                  child: Text('Play a new game?'),
                   onPressed: () {
                     startNewGame();
                     Navigator.of(context).pop();
@@ -153,7 +154,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('Draw!'),
+              title: Text('Draw'),
               content: Text('The game ended in a draw.'),
               actions: <Widget>[
                 TextButton(
@@ -217,15 +218,15 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
             ),
             SizedBox(height: 30.0),
             Text(
-              isPlayerTurn ? 'Your turn' : 'AI is thinking...',
+              isPlayerTurn ? 'Your turn' : 'Bot is Thinking',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25.0,
               ),
             ),
             SizedBox(height: 30.0),
-            ElevatedButton(
-              child: Text('New Game'),
+            IconButton(
+              icon: Icon(FluentIcons.play_32_regular),
               onPressed: () {
                 startNewGame();
               },

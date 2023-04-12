@@ -117,7 +117,7 @@ class _QuizPageState extends State<QuizPage> {
       showDialog(
         context: context,
         builder: (_) => AlertDialog(
-          title: const Text('Quiz Completed!'),
+          title: const Text('Quiz finish!'),
           content: Text('You scored $_score out of ${_questions.length}!'),
           actions: [
             TextButton(
@@ -149,7 +149,7 @@ class _QuizPageState extends State<QuizPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mini Quiz App'),
+        title: const Text('MiniQuizzes'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

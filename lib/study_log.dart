@@ -28,7 +28,7 @@
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: const Text('Add Study Log'),
+            title: const Text('Add Log'),
             content: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -90,11 +90,11 @@
     Widget build(BuildContext context) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('Study Log'),
+          title: const Text('Logbook'),
         ),
         body: _logList.isEmpty
             ? const Center(
-                child: Text('No study logs yet.'),
+                child: Text('Did you really study??.'),
               )
             : ListView.builder(
                 itemCount: _logList.length,
@@ -108,7 +108,7 @@
               ),
         floatingActionButton: FloatingActionButton(
           onPressed: _showAddLogDialog,
-          tooltip: 'Add Study Log',
+          tooltip: 'Add Log',
           child: const Icon(Icons.add),
         ),
       );
